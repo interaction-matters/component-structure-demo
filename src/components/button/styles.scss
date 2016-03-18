@@ -1,0 +1,93 @@
+/***************
+UI Basics Button
+****************/
+
+// Globals
+@import './globals';
+// Config
+@import './config';
+
+// Static button placeholder
+%button {
+	display: inline-block;
+  margin-bottom: 0;
+  font-size:$button-default-font-size;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  @include rounded($button-border-radius);
+  @include box-shadow(
+  	$button-shadow-horizontal, 
+  	$button-shadow-vertical, 
+  	$button-shadow-blur, 
+  	$button-shadow-colour
+  );
+  padding:$button-padding-top $button-padding-right;
+  line-height:$button-line-height;
+  border:1px solid transparent;
+  transition: $button-transition;
+  &:hover {
+		cursor: pointer;
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+// Mixin for colour variations
+@mixin button($color) {
+	background-color: $color;
+	border-color: mix(black, $color, 5%);
+	&:hover {
+		background-color: mix(black, $color, 10%);
+		border-color: mix(black, $color, 15%);
+	}
+	&.has-focus {
+		background-color: mix(black, $color, 25%);
+		border-color: mix(black, $color, 30%);
+	}
+}
+// The buttons
+.primary {
+	@extend %button;
+	@include button($button-primary-color);
+	color: $button-primary-text-color;
+}
+.success {
+	@extend %button;
+	@include button($button-success-color);
+	color: $button-success-text-color;
+}
+.warning {
+	@extend %button;
+	@include button($button-warning-color);
+	color: $button-warning-text-color;
+}
+.danger {
+	@extend %button;
+	@include button($button-danger-color);
+	color: $button-danger-text-color;
+}
+.info {
+	@extend %button;
+	@include button($button-info-color);
+	color: $button-info-text-color;
+}
+.default {
+	@extend %button;
+	background-color: $button-default-color;
+	border-color: $button-default-border-color;
+	color: $button-default-text-color;
+	&:hover {
+		background-color: $gray-25;
+	}
+}
+// Properties
+.small {
+	font-size: $button-small-font-size;
+  line-height: $button-small-line-height;
+  padding:0 $button-small-padding;
+}
+.large {
+	font-size: $button-large-font-size;
+}

@@ -1,0 +1,31 @@
+/**********************
+App.scss
+-----------------------
+This file imports any
+global app dependencies
+***********************/
+
+/************
+1. Vendor 
+*************/
+
+//Normalize
+@import "~assets/styles/vendor/normalize";
+
+/************
+2. Global 
+*************/
+
+//Font icons
+@import '~assets/styles/base/global/icons';
+
+//Utilities
+@import '~assets/styles/base/global/utils';
+
+//Typography
+@import '~assets/styles/base/global/typography';
+
+//Just for demo purposes
+body {
+	padding:2em;
+}

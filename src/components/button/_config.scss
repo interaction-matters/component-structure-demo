@@ -1,0 +1,43 @@
+/*************************
+Button Config Variables
+**************************/
+
+$button-default-color: white;
+$button-primary-color: $primary;
+$button-success-color: $success;
+$button-warning-color: $warning;
+$button-danger-color: $danger;
+$button-info-color: $info;
+
+$button-default-text-color: $gray-90;
+$button-primary-text-color: white;
+$button-success-text-color: white;
+$button-warning-text-color: mix(black, $warning, 60%);
+$button-danger-text-color: white;
+$button-info-text-color: white;
+
+$button-padding-top: $default-padding * 0.45;
+$button-padding-right: $default-padding * 0.625;
+$button-padding-bottom: $default-padding * 0.45;
+$button-padding-left: $default-padding * 0.625;
+
+$button-small-padding: ceil(($font-size-small / 2)); //~6px
+
+$button-border-radius: $border-radius-base;
+
+$button-default-border-color: lighten($gray-50, 10%);
+
+$button-shadow-horizontal: 0;
+$button-shadow-vertical: 1px;
+$button-shadow-blur: 1px;
+$button-shadow-spread: 0;
+$button-shadow-colour: rgba(0,0,0,0.025);
+
+$button-line-height: initial;
+$button-small-line-height: $line-height-base; //~20/14
+
+$button-transition: 0.2s all ease;
+
+$button-default-font-size: ceil(($font-size-base * 0.9)); //~13px
+$button-small-font-size: $font-size-small; //~12px
+$button-large-font-size: $font-size-large; //~18px

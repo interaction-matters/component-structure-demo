@@ -1,0 +1,47 @@
+/***************************
+Utils
+----------------------------
+Re-usable utility classes
+****************************/
+
+.visibly-hidden {
+  height: 1px;
+  left: -10px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;  
+  width: 1px;
+  z-index: -1;
+}
+
+.appearance-none {
+	-webkit-appearance: none;
+}
+  
+/* Scroll bars */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background:darken(#eee, 2%);
+}
+
+::-webkit-scrollbar-thumb {
+    background:darken(#ddd, 2%);
+    opacity:0.2;
+    transition:ease 0.3s background;
+    &:hover {
+      background:#b01a0d;
+    }
+}
+
+/* Overrides and hacks */
+.ReactTabs__TabList {
+  border-bottom-color: #ddd !important; 
+}
+.ReactTabs__Tab--selected {
+  border-color: #ddd !important;
+}
