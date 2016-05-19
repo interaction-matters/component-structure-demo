@@ -5,6 +5,8 @@ export default class Demo extends Component {
   render() {
     return (
     	<div>
+        <h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
+        <hr />
       	<Button type="default">Default</Button>&nbsp;
       	<Button type="primary">Primary</Button>&nbsp;
       	<Button type="success">Success</Button>&nbsp;

@@ -11,6 +11,8 @@ global app dependencies
 
 //Normalize
 @import "~assets/styles/vendor/normalize";
+// Susy
+@import "susy/sass/susy";
 
 /************
 2. Global 
@@ -24,8 +26,3 @@ global app dependencies
 
 //Typography
 @import '~assets/styles/base/global/typography';
-
-//Just for demo purposes
-body {
-	padding:2em;
-}

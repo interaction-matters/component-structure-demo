@@ -1,5 +1,5 @@
 /***************
-UI Basics Button
+Button
 ****************/
 
 // Globals
@@ -48,31 +48,6 @@ UI Basics Button
 	}
 }
 // The buttons
-.primary {
-	@extend %button;
-	@include button($button-primary-color);
-	color: $button-primary-text-color;
-}
-.success {
-	@extend %button;
-	@include button($button-success-color);
-	color: $button-success-text-color;
-}
-.warning {
-	@extend %button;
-	@include button($button-warning-color);
-	color: $button-warning-text-color;
-}
-.danger {
-	@extend %button;
-	@include button($button-danger-color);
-	color: $button-danger-text-color;
-}
-.info {
-	@extend %button;
-	@include button($button-info-color);
-	color: $button-info-text-color;
-}
 .default {
 	@extend %button;
 	background-color: $button-default-color;
@@ -81,6 +56,28 @@ UI Basics Button
 	&:hover {
 		background-color: $gray-25;
 	}
+}
+// Colour vars for buttons
+$list: primary, warning, success, danger, info;
+
+$color-list: $button-primary-color, 
+						$button-warning-color, 
+						$button-success-color, 
+						$button-danger-color, 
+						$button-info-color;
+
+$text-color-list: $button-primary-text-color, 
+						$button-warning-text-color, 
+						$button-success-text-color, 
+						$button-danger-text-color, 
+						$button-info-text-color;
+// Loop for colours
+@for $i from 1 through length($list) {
+	.#{nth($list, $i)} {
+  	@extend %button;
+		@include button(nth($color-list, $i));
+		color: nth($text-color-list, $i);
+  }
 }
 // Properties
 .small {

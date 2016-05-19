@@ -39,7 +39,7 @@ export default class Button extends Component {
     
     return (
 
-      this.props.disabled == true ? <button type={role} onClick={this.props.onAddClick} className={styles.button} disabled><span className="ui-button__inner">{this.props.children}</span></button> : 
+      this.props.disabled == true ? <button type={role} onClick={this.props.onAddClick} className={style} disabled><span className="ui-button__inner">{this.props.children}</span></button> : 
                            <button type={role} onFocus={this.props.onAddFocus} onBlur={this.props.onAddBlur} onClick={this.props.onAddClick} className={style}><span className="ui-button__inner">{this.props.children}</span></button>
     );
 
