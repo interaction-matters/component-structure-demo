@@ -8,17 +8,28 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <Button type="primary" onClick={this.onReset}>
-          Seconds passed: {this.props.counterStore.timer}
+        <Button onAddClick={this.onPlusClick}>
+          Add +
         </Button>
+        &nbsp;
+        <Button onAddClick={this.onMinusClick}>
+          Delete -
+        </Button>
+        Count: {this.props.counterStore.timer}
         <DevTools />
       </div>
     );
   }
 
-  onReset = () => {
-    this.props.counterStore.resetTimer();
+  onMinusClick = () => {
+    this.props.counterStore.minusClick();
   }
+
+  onPlusClick = () => {
+    this.props.counterStore.plusClick();
+  }
+
 };
+
 
 export default Counter;

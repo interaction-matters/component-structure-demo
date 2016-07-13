@@ -3,14 +3,12 @@ import { observable } from 'mobx';
 class CounterStore {
   @observable timer = 0;
 
-  constructor() {
-    setInterval(() => {
-      this.timer += 1;
-    }, 1000);
+  plusClick() {
+    this.timer +=1;
   }
 
-  resetTimer() {
-    this.timer = 0;
+  minusClick() {
+  	this.timer -=1;
   }
 }
 
