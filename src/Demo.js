@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import Button from 'components/Button/Button';
+import Counter from 'components/counter/Counter';
+import CounterStore from 'components/counter/CounterStore';
 
 export default class Demo extends Component {
+
   render() {
+
+    const counterStore = new CounterStore();
+
     return (
     	<div>
         <h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
@@ -18,6 +24,7 @@ export default class Demo extends Component {
       	<Button type="warning">Button</Button>&nbsp;
       	<Button type="default" size="large">Large Button</Button>
       	<hr />
+        <Counter counterStore={counterStore} />
       </div>
     );
   }
