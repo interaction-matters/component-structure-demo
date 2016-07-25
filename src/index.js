@@ -8,13 +8,12 @@ import styles from './app.scss';
 
 export default class Index extends Component {
   render() {
-    return (
-    	<Workspace>		
-    		<h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
-    		<hr />
-    		<Demo />
-      </Workspace>
-    );
+    return 
+		<Workspace>		
+		<h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
+		<hr />
+		<Demo />
+		</Workspace>
   }
 }
 

@@ -1,0 +1,24 @@
+.root {
+	position: relative;	
+}
+.dropdown-menu {
+	left: 100%;
+	top: 0;
+}
+.label {
+	position: relative;
+}
+.label::after {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	vertical-align: middle;
+	border-left: 4px solid #999;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -2px;
+}

@@ -32,7 +32,7 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }, {
       test: /\.scss?$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass?includePaths[]=' + path.resolve(__dirname, 'node_modules'))
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?includePaths[]=' + path.resolve(__dirname, 'node_modules'))
     }, { 
       test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, 
       loader: 'url-loader?limit=10000&name=fonts/[name].[ext]'

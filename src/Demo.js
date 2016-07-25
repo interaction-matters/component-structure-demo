@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import Button from 'components/Button/Button';
+import Navigation from 'components/navigation/Navigation';
 import Counter from 'components/counter/Counter';
-import CounterStore from 'components/counter/CounterStore';
 
 @observer
 class ButtonGroup extends Component {
@@ -24,10 +24,11 @@ export default class Demo extends Component {
 
   render() {
 
-    const store = new CounterStore();
+    const store = this.props.store;
 
     return (
     	<div>
+        <Navigation navStore={store} />
         <h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
         <hr />
       	<ButtonGroup buttonStore={store} />

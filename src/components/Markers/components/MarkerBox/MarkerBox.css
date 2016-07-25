@@ -1,0 +1,33 @@
+.markerBox {
+  background-color: $markerBox;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    background-color: white;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+  }
+}
+
+.markerBoxDirty {
+  border-style: dashed;
+  border-width: 2px;
+  border-color: #b7b7b7;
+}
+
+.markerBoxError {
+  border-color: #c9302c;
+  textarea:not(:focus) {
+    background-color: #d9534f;
+    color: #fff;
+  }
+}
+
