@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Button from 'components/Button/Button';
+import Workspace from 'templates/workspace/Workspace';
 import Demo from './Demo';
 // Import all of our base styles
 import styles from './app.scss';
 
-export default class App extends Component {
+export default class Index extends Component {
   render() {
-    return (
-    	<div>
-      	<h4>Buttons Demo</h4>
-      	<hr />
-      	<Demo />
-      </div>
-    );
+    return 
+		<Workspace>		
+		<h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
+		<hr />
+		<Demo />
+		</Workspace>
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));

@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 90%;
+  margin-bottom: 0.5em;
+  max-height: 2em;
+
+  .markerName {
+    flex: 0 0 3em;
+    display: flex;
+    position: relative;
+    border-right: 1px solid #d3d3d3;
+    margin: 0 0.25em 0 0;
+    .colorIcon {
+      flex: 1;
+      text-align: center;
+      padding: 0 0.5em;
+      align-items: center;
+      line-height: 2;
+    }
+    ul {
+      position: relative;
+      flex: 0 0 1.25em;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      line-height: 0.88;
+      li {
+        display: table-row;
+        text-align: center;
+        margin: 0 0.25em;
+        color: #666;
+        span {
+          padding: 0 0.25em;
+        }
+      }
+      [data-type="dirty"] {
+        font-weight: bold;
+        font-size: 140%;
+      }
+      [data-type="version"] {
+        font-size: 90%;
+      }
+    }
+  }
+  input {
+    flex: 1;
+  }
+  button {
+    align-self: center;
+    padding: 0.4rem;
+    line-height: 0.5rem;
+  }
+}

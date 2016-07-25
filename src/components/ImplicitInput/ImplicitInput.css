@@ -1,0 +1,19 @@
+:root {
+  --yellow: #ffffc8;
+}
+
+.input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.input:focus{
+  background-color: var(--yellow);
+  border-color: color(var(--yellow) blackness(10%));
+  cursor: text;
+}
+.input:disabled{
+  cursor: pointer;
+}

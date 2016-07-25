@@ -1,0 +1,107 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .markersPanel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .markersPanelHeader {
+      background: $markerPanelHeader;
+      border: 1px solid $markerPanelBorderColor;
+      color: $markerPanelColor;
+      border-radius: $panelBorderRadius $panelBorderRadius 0 0;
+      color: black;
+      padding: $panelHeaderPadding;
+      min-height: $panelHeaderHeight;
+    }
+
+    .markersPanelBody {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      border-radius: 0 0 $panelBorderRadius $panelBorderRadius;
+      border-color: $markerPanelBorderColor;
+      background-color: $markerPanel;
+      border-top: 0;
+      margin-bottom: 1rem;
+      overflow: auto;
+      :global {
+        .panel-body {
+          position: absolute;
+          padding: 0.75em;
+          top: 0;
+          bottom: 1rem;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+
+    .addMarkerButton {
+      margin-bottom: 1.5rem;
+    }
+
+    .addMarker {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .markerBox {
+      background-color: $markerBox;
+      padding: $markerBoxPadding;
+      border-radius: $markerBoxBorderRadius;
+      border: 1px solid $markerBoxBorderColor;
+      margin-bottom: 1rem;
+
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 90%;
+        margin-bottom: 0.5rem;
+
+        .colorIcon {
+          text-align: center;
+          padding: 0 1rem;
+          margin-right: 0.5rem;
+          display: flex;
+          align-items: center;
+        }
+        input {
+          flex: 1;
+        }
+        button {
+          align-self: center;
+          padding: 0.4rem;
+          line-height: 0.5rem;
+        }
+      }
+
+      textarea {
+        color: $markerBoxTextAreaColor;
+        background-color: $markerBoxTextArea;
+        width: 100%;
+        padding: $markerBoxTextAreaPadding;
+        border-radius: $markerBoxTextAreaBorderRadius;
+        border: 1px solid $markerBoxTextAreaBorderColor;
+      }
+    }
+
+    .markerBoxError {
+      border-color: $markerBoxErrorBorderColor;
+
+      textarea {
+        background-color: $markerBoxError;
+        color: $markerBoxErrorColor;
+      }
+    }
+
+  }
+}

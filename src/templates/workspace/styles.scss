@@ -1,0 +1,24 @@
+// Globals
+@import './globals';
+// Config
+@import './config';
+
+.wrapper {
+	display:flex;
+	height:100vh;
+}
+
+.left {
+	flex: 0 0 $navWidth;
+	background: #eee;
+}
+
+.main {
+	flex:1;
+	padding:1em;
+}
+
+.right {
+	flex: 0 0 $helpersWidth;
+	background: #eee;
+}
