@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import Button from 'components/Button/Button';
 import Demo from './Demo';
 // Import all of our base styles
