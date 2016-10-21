@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'components/Button/Button';
+import Swatch from 'components/Swatch/Swatch';
 
 export default class Demo extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class Demo extends Component {
         <h5>Heading Five</h5>
         <h6>Heading Six</h6>
         <hr />
-        
+        <Swatch name="Primary"></Swatch>
       </div>
     );
   }
