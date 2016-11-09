@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Button from './Button'
 import theme from './button.scss';
 
-class ButtonFactory extends Component {
+class ButtonContainer extends Component {
 	render() {
 		return(
 			<Button theme={theme} {...this.props} />
@@ -14,5 +14,5 @@ class ButtonFactory extends Component {
 	}
 } 
 
-export {ButtonFactory as Button};
+export {ButtonContainer as Button};
 export default Button;

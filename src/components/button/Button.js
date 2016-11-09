@@ -14,16 +14,18 @@ export default class Button extends Component {
     width: React.PropTypes.string,
     size: React.PropTypes.string,
     focus: React.PropTypes.string,
-    className: React.PropTypes.string
+    className: React.PropTypes.string,
+    disabled: React.PropTypes.bool
   };
 
   static defaultProps = {
     role: 'button',
     type: 'default',
-    className: 'btn'
+    disabled: false
   };
 
   render() {
+
     const {theme, type, role, width, size, focus, className} = this.props;
     // Type of button [default, primary, warning, success, info, link, delete]
     let typeClass = theme ? theme[type] : null;
@@ -35,14 +37,25 @@ export default class Button extends Component {
     let sizeClass = theme ? theme[size] : null;
     // Focus
     let focusClass = theme ? theme[focus] : null;
+    // Injected styles
 
     // ClassNames utility combines classes and removes any falsey values
     let style = ClassNames(className, typeClass, roleClass, widthClass, sizeClass, focusClass);
     
     return (
 
-      this.props.disabled == true ? <button type={role} onClick={this.props.onAddClick} className={styles.button} disabled><span className="ui-button__inner">{this.props.children}</span></button> : 
-                           <button type={role} onFocus={this.props.onAddFocus} onBlur={this.props.onAddBlur} onClick={this.props.onAddClick} className={style}><span className="ui-button__inner">{this.props.children}</span></button>
+      this.props.disabled == true 
+      ? <button type={role} 
+                onClick={this.props.onAddClick}
+                className={style} 
+                disabled>
+                <span>{this.props.children}</span>
+        </button>
+      : <button type={role}
+                onClick={this.props.onAddClick}
+                className={style}>
+                <span>{this.props.children}</span>
+        </button>
     );
 
   }
