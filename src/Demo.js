@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'components/Button/Button';
+import Snippet from 'components/Snippet/Snippet';
 
 export default class Demo extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class Demo extends Component {
       	<Button type="warning">Button</Button>&nbsp;
       	<Button type="default" size="large">Large Button</Button>
       	<hr />
+        <Snippet />
       </div>
     );
   }

@@ -31,7 +31,7 @@ module.exports = {
       loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
     }, {
-      test: /\.scss?$/,
+      test: /\.css($|\?)|\.scss($|\?)/,
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass?includePaths[]=' + path.resolve(__dirname, 'node_modules'))
     }, { 
       test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, 
