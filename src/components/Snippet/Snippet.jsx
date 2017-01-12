@@ -17,6 +17,7 @@ class Snippet extends Component {
 							<div className={styles.expander} title="Expand/collapse result list item"></div>
 						</div>
 					</div>
+					{/* meta */}
 					<div className={styles.meta}>
 						<div className={styles.head}>
 							<h2 className={styles.title} title="Open family">
@@ -51,6 +52,7 @@ class Snippet extends Component {
 				</header>
 				<section className={styles.snippetContent}>
 					{/* publication, excerpts - abs/clms/desc/wpi, images */}
+					
 				</section>
 			</article>
 		)
