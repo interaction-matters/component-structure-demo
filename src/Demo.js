@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'components/Button/Button';
 import Snippet from 'components/Snippet/Snippet';
+import QueryInput from 'components/QueryInput/QueryInput';
 
 export default class Demo extends Component {
   render() {
@@ -20,6 +21,8 @@ export default class Demo extends Component {
       	<Button type="default" size="large">Large Button</Button>
       	<hr />
         <Snippet />
+        <hr />
+        <QueryInput />
       </div>
     );
   }
