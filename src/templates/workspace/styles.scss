@@ -10,13 +10,25 @@
 
 .left {
 	flex: 0 0 $navWidth;
+	background: #ddd;
+}
+
+.markers {
+	flex:0 0 15%;
 	background: #eee;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	transition:all 0.3s ease;
+}
+
+.collapsed {
+	flex:0 0 100px;
 }
 
 .main {
 	flex:1;
-	padding:1em;
 	position:relative;
+	transition:all 0.3s ease;
 }
 
 .right {
