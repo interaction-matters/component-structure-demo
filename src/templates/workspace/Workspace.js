@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Navigation from 'components/navigation/Navigation';
 import {observer, inject, Provider} from 'mobx-react';
 import AppState from 'AppState';
+
+import Button from 'components/Button/Button';
+
 import styles from './styles.scss';
 
 @inject('appState') @observer
 class Workspace extends Component {
   render() {
 
-    const { dualScreen, panelSize, markerCollapse } = this.props.appState;
+    const { markerCollapse, collapseMarkers } = this.props.appState;
 
     console.log("markerCollapse: " + markerCollapse);
 
@@ -19,14 +22,11 @@ class Workspace extends Component {
         </section>
         {(markerCollapse ?
           <section className={`${styles.markers} ${styles.collapsed}`}>
-            &nbsp;
+            
           </section>
           :
           <section className={styles.markers}>
-            &nbsp;
-            {markerCollapse}<br />
-            {dualScreen}<br />
-            {panelSize}
+            
           </section>
         )}
         

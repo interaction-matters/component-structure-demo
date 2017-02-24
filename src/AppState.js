@@ -12,8 +12,12 @@ class AppState {
   	console.log(this.markerCollapse);
   }
 
+  @action collapseMarkers = () => {
+  	this.markerCollapse = !this.markerCollapse;
+  }
+
   @action triggerViewerMode = () => {
-    this.dualScreen ? this.panelSize = "50%" : this.panelSize = "20%"; 
+    this.dualScreen ? this.panelSize = "50%" : this.panelSize = 70; 
     this.dualScreen = !this.dualScreen;
     this.markerCollapse = !this.markerCollapse;
   }

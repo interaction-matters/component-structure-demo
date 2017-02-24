@@ -22,7 +22,7 @@
 }
 
 .collapsed {
-	flex:0 0 100px;
+	flex:0 0 $navWidth;
 }
 
 .main {
@@ -34,4 +34,5 @@
 .right {
 	flex: 0 0 $helpersWidth;
 	background: #eee;
+	border-left:1px solid #ccc;
 }

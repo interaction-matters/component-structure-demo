@@ -1,0 +1,48 @@
+@import '~assets/styles/base/variables/colours';
+@import '~assets/styles/base/variables/typography';
+@import '~assets/styles/base/variables/scaffolding';
+@import '~assets/styles/base/mixins/border-radius';
+@import '~assets/styles/base/mixins/box-shadow';
+@import '~assets/styles/base/mixins/header';
+
+.application {
+	font-size:16px;
+	h3 {
+		margin-top:0;
+		margin-bottom:$inner-padding;
+	}
+	h4 {
+		margin-bottom:$default-padding;
+	}
+	table, tbody {
+		width:100%;
+	}
+	table, tr, td {
+		border:1px solid $gray-25;
+	}
+	td {
+		padding:$inner-padding;
+		ul {
+			padding-left:$inner-padding;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.actions {
+  @include header;
+  border-bottom: 1px solid $gray-25;
+  padding: 0 $default-padding;
+}
+
+.title {
+  font-size: $font-size-large;
+  font-weight: bold;
+}
+
+.viewer {
+	padding:$viewer-padding;
+	height:calc(100vh - #{$header-height-base} - (#{$viewer-padding} * 2));
+	overflow:auto;
+}

@@ -1,0 +1,6 @@
+@mixin header {
+	display:flex;
+	align-items:center;
+	min-height:$header-height-base;
+	max-height:$header-height-base;
+}

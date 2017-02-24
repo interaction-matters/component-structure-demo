@@ -6,11 +6,15 @@ variables and classes
 *********************************/
 
 // Padding defaults
-$default-padding: 	1.2em;
-$inner-padding:		.625em;
+$default-padding: 	1.4em;
+$inner-padding:		.825em;
+$viewer-padding:    3em;
 
 // Margin defaults
 $body-top-margin:		$default-padding;	
 
 // Border radius
-$border-radius-base: 0.225em;
+$border-radius-base: 0.125em;
+
+// Headers
+$header-height-base: 65px;
