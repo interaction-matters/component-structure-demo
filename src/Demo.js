@@ -50,7 +50,7 @@ export default class Demo extends Component {
     	<div>
       
         <SplitPane split="vertical" size={panelSize}>
-            {( !dualScreen ?
+             
               <div style={{padding:'1em'}}>
                 <h4><i className="icon-dossier-files"></i> Buttons Demo</h4>
                 <hr />

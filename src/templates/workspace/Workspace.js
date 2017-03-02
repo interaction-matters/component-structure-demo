@@ -3,6 +3,8 @@ import Navigation from 'components/navigation/Navigation';
 import {observer, inject, Provider} from 'mobx-react';
 import AppState from 'AppState';
 
+import SplitPane from 'react-split-pane';
+
 import Button from 'components/Button/Button';
 
 import styles from './styles.scss';
@@ -11,9 +13,7 @@ import styles from './styles.scss';
 class Workspace extends Component {
   render() {
 
-    const { markerCollapse, collapseMarkers } = this.props.appState;
-
-    console.log("markerCollapse: " + markerCollapse);
+    const { markerCollapse, collapseMarkers, dualScreen, panelSize, pinnedItemsCollapse } = this.props.appState;
 
     return(
       <div className={styles.wrapper}>
@@ -22,20 +22,34 @@ class Workspace extends Component {
         </section>
         {(markerCollapse ?
           <section className={`${styles.markers} ${styles.collapsed}`}>
-            
+            {React.cloneElement(this.props.sidebar, { styles })}
           </section>
           :
           <section className={styles.markers}>
-            
+            {React.cloneElement(this.props.sidebar, { styles })}
           </section>
         )}
         
         <section className={styles.main}>
-          {this.props.children}
+          <SplitPane split="vertical" size={panelSize}>
+            <section className={styles.leftContent}>
+              {React.cloneElement(this.props.leftContent, { styles })}
+            </section>
+            <section className={styles.rightContent}>
+              {React.cloneElement(this.props.rightContent, { styles })}
+            </section>
+          </SplitPane>
+          {/* {this.props.children} */}
         </section>
-        <section className={styles.right}>
-          &nbsp;
-        </section>
+        {(!pinnedItemsCollapse ?
+          <section className={`${styles.right} ${styles.collapsed}`}>
+            &nbsp;
+          </section>
+          :
+          <section className={styles.right}>
+            &nbsp;
+          </section>
+        )}
       </div>
     )
   }

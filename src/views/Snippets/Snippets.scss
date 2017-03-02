@@ -1,13 +1,9 @@
 @import '~assets/styles/base/mixins/header';
+@import '~assets/styles/base/variables/colours';
 @import '~assets/styles/base/variables/scaffolding';
-
-.markers {
-
-}
 
 .header {
 	@include header;
-	padding: 0 1.4em;
-	background: #eee;
-	border-bottom: 1px solid #d9d9d6;
+	border-bottom: 1px solid $gray-25;
+	padding:0 1.4em;
 }

@@ -1,0 +1,33 @@
+@import '~assets/styles/base/mixins/header';
+@import '~assets/styles/base/variables/colours';
+@import '~assets/styles/base/variables/scaffolding';
+
+.header {
+	@include header;
+	border-bottom: 1px solid $gray-25;
+	padding:0 1.4em;
+}
+
+.leftContent {
+	height:100%;
+	background:white;
+}
+
+.rightContent {
+	height:100%;
+	background:white;
+}
+
+.pin {
+	position:absolute;
+	right:1.2em;
+	top:1.2em;
+	a {
+		display:block;
+		cursor:pointer;
+	}
+}
+
+.pinned {
+	color:$gray-50;
+}

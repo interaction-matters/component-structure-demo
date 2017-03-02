@@ -1,5 +1,65 @@
 @import './config';
 
-.navigation {
-	
+.navbar {
+  align-items: flex-start;
+  /*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /*transition: 0.3s ease flex;*/
+  z-index: 1;
+}
+
+.navbar > .subNav {
+  margin-top: 100px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.navbar.default {
+  flex: 0 0 67px;
+}
+
+.navbar.expanded {
+  flex: 0 0 200px;
+}
+
+.navbar a.navItem {
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.navbar a.navItem:hover {
+  background: #F7F7F9;
+}
+
+.navbar > :first-child {
+  margin-top: 10px;
+}
+
+.navbar > :last-child {
+  margin-top: auto;
+}
+
+.navbar a.navItem.active,
+.navbar a.navItem.active:hover,
+.navbar a.navItem.active:focus {
+  background: #ddd;
+  color: #039BE5;
+}
+
+.navbar a.navItem > i {
+  font-size: 21px;
+  margin-left: 20px;
+  min-width: 21px;
+  text-align: center;
+}
+
+.navbar a.navItem > div.navTitle {
+  font-size: 14px;
+  margin-left: 20px;
+  padding: 2px 0 0 0;
 }

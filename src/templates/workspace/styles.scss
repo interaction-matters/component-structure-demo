@@ -29,10 +29,26 @@
 	flex:1;
 	position:relative;
 	transition:all 0.3s ease;
+	background:#eee;
+}
+
+.leftContent {
+	height:100%;
+	background: white;
+	transition:all 0.3s ease;
+}
+
+.rightContent {
+	height:100%;
+	background: white;
 }
 
 .right {
 	flex: 0 0 $helpersWidth;
 	background: #eee;
 	border-left:1px solid #ccc;
+	transition:all 0.3s ease;
+	&.collapsed {
+		flex:0;
+	}
 }

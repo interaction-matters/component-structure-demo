@@ -27,28 +27,25 @@ global app dependencies
 //Typography
 @import '~assets/styles/base/global/typography';
 
+
 :global {
 	.Resizer {
 	    -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
 	    box-sizing: border-box;
-	    background: #000;
-	    opacity: .2;
+	    background: #eee;
+	    //opacity: .1;
 	    z-index: 1;
 	    -moz-background-clip: padding;
 	    -webkit-background-clip: padding;
 	    background-clip: padding-box;
-	    width: 11px;
-    	margin: 0 -5px;
-    	border-left: 5px solid rgba(255, 255, 255, 0);
-    	border-right: 5px solid rgba(255, 255, 255, 0);
+	    width: 15px;
+    	//margin: 0 -5px;
+    	border-left: 1px solid #ccc;
+    	border-right: 1px solid #ccc;
 		cursor: col-resize;
 	}
 
 	.Resizer:hover {
-	    -webkit-transition: all 2s ease;
-	    transition: all 2s ease;
-	    border-left: 5px solid rgba(0, 0, 0, 0.5);
-		border-right: 5px solid rgba(0, 0, 0, 0.5);
 	}
 }
