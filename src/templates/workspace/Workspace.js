@@ -33,10 +33,14 @@ class Workspace extends Component {
         <section className={styles.main}>
           <SplitPane split="vertical" size={panelSize}>
             <section className={styles.leftContent}>
-              {React.cloneElement(this.props.leftContent, { styles })}
+                <div className={styles.panel}>
+                  {React.cloneElement(this.props.leftContent, { styles })}
+                </div>
             </section>
             <section className={styles.rightContent}>
-              {React.cloneElement(this.props.rightContent, { styles })}
+                <div className={styles.panel}>
+                  {React.cloneElement(this.props.rightContent, { styles })}
+                </div>
             </section>
           </SplitPane>
           {/* {this.props.children} */}

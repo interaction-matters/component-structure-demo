@@ -17,7 +17,6 @@
 	flex:0 0 15%;
 	background: #eee;
 	border-left:1px solid #ccc;
-	border-right:1px solid #ccc;
 	transition:all 0.3s ease;
 }
 
@@ -33,20 +32,26 @@
 }
 
 .leftContent {
-	height:100%;
-	background: white;
-	transition:all 0.3s ease;
+	& > .panel {
+		height:100vh;
+		background:white;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+	}
 }
 
 .rightContent {
-	height:100%;
-	background: white;
+	& > .panel {
+		height:100vh;
+		background:white;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+	}
 }
 
 .right {
 	flex: 0 0 $helpersWidth;
 	background: #eee;
-	border-left:1px solid #ccc;
 	transition:all 0.3s ease;
 	&.collapsed {
 		flex:0;

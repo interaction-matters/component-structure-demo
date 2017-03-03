@@ -9,13 +9,25 @@
 }
 
 .leftContent {
-	height:100%;
-	background:white;
+	& > .panel {
+		height:100vh;
+		background:white;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+	}
 }
 
 .rightContent {
-	height:100%;
-	background:white;
+	& > .panel {
+		height:100vh;
+		background:white;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+		&.pinned {
+			//margin:1em;
+			//height:calc(100vh - 2em);
+		}
+	}
 }
 
 .pin {
