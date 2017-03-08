@@ -1,0 +1,72 @@
+/**************
+UI Basics Panel
+***************/
+
+// Dependencies:
+
+// Border-radius
+@import '~assets/styles/base/mixins/border-radius';
+// Box-shadow
+@import '~assets/styles/base/mixins/box-shadow';
+// Colours
+@import '~assets/styles/base/variables/colours';
+// Padding & margin
+@import '~assets/styles/base/variables/scaffolding';
+// Clearfix
+@import '~assets/styles/base/mixins/clearfix';
+
+@mixin header-variant($colour) {
+  background: lighten($colour, 40%);
+  color: darken($colour, 10%);
+  border: 1px solid lighten($colour, 30%);
+}
+
+// Styles
+.panel {
+  margin-bottom: 1.2em;
+  background-color: #fff;
+}
+// Panel header
+.header {
+  //font-size:18px;
+  padding:6px 20px;
+  @include border-radius(3px, 3px, 0, 0);
+  //Colours 
+  .default & {
+    @include header-variant(lighten($gray-75, 18%));
+    border:1px solid darken($gray-25, 2%);
+  }
+  .primary & {
+    @include header-variant($primary);
+  }
+  .danger & {
+    @include header-variant($danger);
+  }
+  .info & {
+    @include header-variant($info);
+  }
+  .success & {
+    @include header-variant($success);
+  }
+}
+.inner {
+  padding:$default-padding;
+  border: 1px solid darken($gray-25, 5%);
+  @include border-radius(3px, 3px, 3px, 3px);
+  @include clearfix;
+  .header + & {
+    border-top:0;
+    @include border-radius(0, 0, 3px, 3px);
+  }
+  & > * {
+  	&:first-child {
+	  	//padding-top:0;
+	  	margin-top:0;
+  	}
+    &:last-child {
+      //padding-top:0;
+      margin-bottom:0;
+    }
+  }
+}
+

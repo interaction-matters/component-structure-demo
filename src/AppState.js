@@ -14,7 +14,7 @@ class AppState {
   @action triggerViewerMode = () => {
     this.dualScreen ? this.panelSize = "50%" : this.panelSize = 70; 
     this.dualScreen = !this.dualScreen;
-    this.markerCollapse = !this.markerCollapse;
+    this.collapseMarkers();
     this.pinnedItemsCollapse = !this.pinnedItemsCollapse;
   }
 }

@@ -1,4 +1,5 @@
 @import '~assets/styles/base/mixins/header';
+@import '~assets/styles/base/variables/colours';
 @import '~assets/styles/base/variables/scaffolding';
 
 .markers {
@@ -8,6 +9,73 @@
 .header {
 	@include header;
 	padding: 0 1.4em;
-	background: #eee;
-	border-bottom: 1px solid #d9d9d6;
+	background: lighten(#ddd, 3%);
+	border-bottom: 1px solid #ccc;
+	position:relative;
+}
+
+.collapse {
+	transition: background 0.3s ease;
+	cursor: pointer;
+	&.open {
+		position: absolute;
+		right: 0;
+		height: $header-height-base;
+		display: table;
+		vertical-align: middle;
+		border-left: 1px solid #ddd;
+		padding: 0 1em;
+		display: table;
+		& > i {
+			display:table-cell;
+			vertical-align: middle;
+		}
+	}
+	&.closed {
+		display: block;
+		text-align:center;
+		padding:0.5em 0;
+		border-bottom: 1px solid #ddd;
+	}
+	&:hover {
+		background: darken(#ddd, 1%);
+	}
+}
+
+.addMarker {
+	list-style:none;
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 0.8em;
+	border-right: 1px solid #ddd;
+	color: #999;
+	cursor: pointer;
+	border-bottom: 4px solid transparent;
+}
+
+.markerActions {
+	display:table;
+	width:100%;
+	border-bottom:1px solid #ccc;
+}
+
+.dropdown {
+	padding-left:10px;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.search {
+	float:right;
+	border:0;
+	min-width:60px;
+	min-height:60px;
+	font-size:120%;
+	color:$white;
+	padding:1em;
+	background:$primary;
+	transition:background 0.3s ease;
+	&:hover {
+		background:darken($primary, 5%);
+	}
 }

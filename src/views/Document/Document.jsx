@@ -38,9 +38,6 @@ class Document extends Component {
 										<i className='fa fa-fw fa-file-text' aria-hidden='true' />
 										<h5>Application</h5>
 									</span>
-									<span className={styles.pin}>
-											<a onClick={triggerViewerMode}><i className='fa fa-2x fa-fw fa-times' aria-hidden='true' /></a>
-									</span>
 								</header>
 								<div style={{padding:'1em'}}>
 									more content
@@ -55,10 +52,12 @@ class Document extends Component {
 										<h5>Document</h5>
 									</span>
 									<span className={styles.pin}>
-									  <span className={styles.pinned}><i className='fa fa-fw fa-thumb-tack' aria-hidden='true' /> Pinned</span>
+									  
+									  <a onClick={triggerViewerMode}><i className='fa fa-2x fa-fw fa-times' aria-hidden='true' /></a>
 									</span>
 								</header>
 								<div style={{padding:'1em'}}>
+									<span style={{float: 'right'}}><i className='fa fa-fw fa-thumb-tack' aria-hidden='true' /> Pinned</span><br />
 									more content
 								</div>
 							</div>

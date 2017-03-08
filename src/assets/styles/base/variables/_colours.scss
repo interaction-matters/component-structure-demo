@@ -2,15 +2,21 @@
 Colour variables
 ***********************/
 
+/* Basic colour setup */
+
 $black: #000000;
 $white: #FFFFFF;
 
-$primary: #004C97;
-$success: #008139;
-$danger: #AC2B37;
-$warning: #f3d54e;
-$info: #1596D1;
+$epo-red:#BE0F05;
+$epo-grey:#404955;
+$epo-blue:#5f7b8f;
+$epo-dark-blue:#2A323D;
 
+$blue: #039BE5;
+$green: #008139;
+$orange: #AC2B37;
+$red: #f3d54e;
+$light-blue: #1596D1;
 $dark-red: #4E131E;
 $medium-red: #A6192E;
 $bright-red: #E4002B;
@@ -36,3 +42,27 @@ $gray-90: #444444;
 $gray-75: #63666a;
 $gray-50: #a7a8aa;
 $gray-25: #d9d9d6;
+$gray-15: #F7F7F9;
+
+/* Default colours */
+
+$primary: $blue;
+$success: $green;
+$danger: $red;
+$warning: $orange;
+$info: $light-blue;
+
+/* Text */
+
+$text-colour-default: $gray-90;
+$box-shadow-default-colour: $gray-50;
+
+/* Border colours */
+
+$thumbnail-border-colour: $gray-25;
+$thumbnail-border-colour-hover: #00BFFF;
+$thumbnail-border-colour-active: #FF8C00;
+
+/* Background colours */
+
+$button-bkg-default: $gray-25;

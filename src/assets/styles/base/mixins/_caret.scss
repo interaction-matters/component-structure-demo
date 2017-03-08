@@ -1,9 +1,19 @@
 @mixin caret {
-	display: inline-block;
+  display: inline-block;
   width: 0;
   height: 0;
   vertical-align:middle;
   border-top: 4px dashed;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
+}
+
+@mixin caret-large {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align:middle;
+  border-top: 6px dashed;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
 }

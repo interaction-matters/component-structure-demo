@@ -29,23 +29,43 @@ global app dependencies
 
 
 :global {
+	// SplitPane
 	.Resizer {
 	    -moz-box-sizing: border-box;
 	    -webkit-box-sizing: border-box;
 	    box-sizing: border-box;
 	    background: #eee;
-	    //opacity: .1;
 	    z-index: 1;
 	    -moz-background-clip: padding;
 	    -webkit-background-clip: padding;
 	    background-clip: padding-box;
 	    width: 15px;
-    	//margin: 0 -5px;
-    	//border-left: 1px solid #ccc;
-    	//border-right: 1px solid #ccc;
 		cursor: col-resize;
 	}
-
-	.Resizer:hover {
+	.Resizer:hover {}
+	.Pane {
+		transition: all 0.3s ease 0s;
+	}
+	// ReactTabs
+	.ReactTabs {
+		&__TabList {
+			margin-bottom:0;
+			padding-left:0;
+			list-style:none;
+			border-bottom:1px solid #ccc;
+		}
+		&__Tab {
+			display:inline-block;
+			background:rgba(255, 255, 255, 0.7);
+			padding:0.8em 1.2em;
+			border-right:1px solid #ddd;
+			color:#999;
+			cursor:pointer;
+			border-bottom: 4px solid transparent;
+			&[aria-selected="true"] {
+				color:#222;
+				border-bottom-color: #039BE5;
+			}
+		}
 	}
 }
