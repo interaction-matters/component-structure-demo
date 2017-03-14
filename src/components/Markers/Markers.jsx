@@ -17,6 +17,12 @@ class Markers extends React.Component {
 
 		Tabs.setUseDefaultStyles(false);
 
+		const menuItems = [
+			{text:"All databases", target: "", icon: "database"}, 
+			{text:"Patent Literature", target: ""}, 
+			{text:"Non-patent Literature", target: ""}
+		]
+
 		return(
 			<div>
 				{( !markerCollapse ?
@@ -37,7 +43,7 @@ class Markers extends React.Component {
 	              <li className={styles.addMarker}><i className='fa fa-fw fa-plus' aria-hidden='true' /></li>
 	            </TabList>
 	            <TabPanel>
-	            	<MarkerActions />
+	            	<MarkerActions menuItems={menuItems} />
 	            	<div style={{padding:'1.5em'}}>
 		            	<SlidePanel title="Marker Query" visibility="visible">
 		            		<Panel header="Marker A" />

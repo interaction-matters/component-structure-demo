@@ -12,6 +12,49 @@ Usage:
 ****************************/
 
 @font-face {
+  font-family: 'icomoon';
+  src:  url('assets/fonts/epo/icomoon.eot?99lf3r');
+  src:  url('assets/fonts/epo/icomoon.eot?99lf3r#iefix') format('embedded-opentype'),
+    url('assets/fonts/epo/icomoon.ttf?99lf3r') format('truetype'),
+    url('assets/fonts/epo/icomoon.woff?99lf3r') format('woff'),
+    url('assets/fonts/epo/icomoon.svg?99lf3r#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global {
+
+	.icon-library-icon:before {
+	  content: "\e900";
+	}
+	.icon-application-icon:before {
+	  content: "\e901";
+	}
+	.icon-query-icon:before {
+	  content: "\e902";
+	}
+	.icon-epoque2-icon:before {
+	  content: "\e903";
+	}
+}
+
+/*
+@font-face {
 	font-family: 'icomoon';
 	src:url('assets/fonts/icomoon.eot?-gjmpou');
 	src:url('assets/fonts/icomoon.eot?#iefix-gjmpou') format('embedded-opentype'),
@@ -33,7 +76,7 @@ Usage:
 		text-transform: none;
 		line-height: 1;
 
-		/* Better Font Rendering =========== */
+		/* Better Font Rendering =========== *//*
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
@@ -2794,5 +2837,5 @@ Usage:
 	}
 	.icon-offline_pin:before {
 		content: "\e31a";
-	}
-}
+	} 
+}*/

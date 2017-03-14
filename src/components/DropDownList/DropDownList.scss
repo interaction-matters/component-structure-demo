@@ -1,0 +1,29 @@
+/*************
+Dropdown List
+**************/
+
+.list {
+	display:block;
+	padding:0;
+	margin:0;
+}
+
+.item {
+	list-style:none;
+	cursor:pointer;
+	i {
+		display: inline-block;
+		margin-right:5px;
+	}
+}
+
+.horizontal {
+	vertical-align:middle;
+	.item {
+		display:inline;
+		margin-right:1em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

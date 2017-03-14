@@ -5,6 +5,7 @@ For dropdowns
 ***************/
 
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Button from './Button';
 import styles from './styles.scss';
 
@@ -12,8 +13,24 @@ export default class DropdownButton extends Component {
 
 	constructor(props) {
      super(props);
-     /* Set initial slide content to hidden */
-     this.state = {toggle: 'off'};
+     this.state = {
+      toggle: this.props.toggle
+     };
+     this.handleFocus = this.handleFocus.bind(this);
+  }
+
+  handleFocus(e) {
+    if (!ReactDOM.findDOMNode(this).contains(e.target)) {
+      this.setState({toggle: 'off'});
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('click', this.handleFocus, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.handleFocus, false);
   }
 
 	render() {
@@ -36,10 +53,10 @@ export default class DropdownButton extends Component {
     this.state.toggle === 'on'
       ? focus = "hasFocus"
       : focus = ""
-    
+
     return (
     	<div className={styles.dropdownButton}>
-    		<Button {...this.props} focus={focus} onAddClick={toggl.bind(this)} onAddBlur={togglOff.bind(this)}>
+    		<Button {...this.props} focus={focus} onAddClick={toggl.bind(this)}>
     			{this.props.title}
           <span className={styles.caret}></span>
          
@@ -56,5 +73,6 @@ export default class DropdownButton extends Component {
 
 DropdownButton.defaultProps = {
   role: 'button',
-  type: 'default'
+  type: 'default',
+  toggle: 'off'
 }

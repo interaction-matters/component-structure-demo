@@ -3,30 +3,37 @@ import styles from './Markers.scss';
 
 import DropDownButton from 'components/Button/DropDownButton';
 import DropDownPanel from 'components/DropDownPanel/DropDownPanel';
-import MenuList from 'components/MenuList/MenuList';
+import DropDownList from 'components/DropDownList/DropDownList';
 import Button from 'components/Button/Button';
 
 class MarkerActions extends React.Component {
+
+	constructor(props) {
+     super(props);
+     this.state = {title: 'All Databases'};
+  }
+
 	render() {
 
-		const menuItems = [
-			{text:"All databases", target: "", icon: "database"}, 
-			{text:"Patent Literature", target: ""}, 
-			{text:"Non-patent Literature", target: ""}
-		]
+		const {menuItems} = this.props;
+
+		function changeTitle(e) {
+			//console.log("Added: " + e.target.innerText);
+			this.setState({title: e.target.innerText})
+		}
 
 		return(
 			<div className={styles.markerActions}>
 				<span className={styles.dropdown}>
-					<DropDownButton title="dropdown" type="default" title="Search on">
-            <DropDownPanel>
-              <MenuList menuItems={menuItems} />
+					<DropDownButton title="dropdown" type="default" title={this.state.title}>
+            <DropDownPanel toggle="off">
+              <DropDownList onAddClick={changeTitle.bind(this)} menuItems={menuItems} />
             </DropDownPanel>
           </DropDownButton>
 				</span>
 				<span style={{float:'right'}}>
 					<button className={styles.search}>
-						<i className="fa fa-search" aria-hidden="true"></i>&nbsp;Search
+						<i className="fa fa-2x fa-search" aria-hidden="true"></i>
 					</button>
 				</span>
 			</div>

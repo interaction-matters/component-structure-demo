@@ -1,38 +1,34 @@
 /************************
-Menu 
+Dropdown List 
 -------------------------
 A component for creating
-a simple menu, comprising
-a series of links
+a simple list, comprising
+a series of anchor tags
 *************************/
 
 import React, { Component } from 'react';
 
-import styles from './MenuList.scss';
+import styles from './DropDownList.scss';
 
-import { Link } from 'react-router';
-
-export default class MenuList extends Component {
+export default class DropDownList extends Component {
 
   render() {
 
-  	// Set menu placement
-  	var menuPlacement = this.props.menuPlacement;
   	// Get menu items in menu
   	var menuItems = this.props.menuItems.map((menuItem, index) => {
       return <li key={index} className={styles.item}>
-      					<Link to={menuItem.target}>
+      					<a onClick={this.props.onAddClick}>
                   {(menuItem.icon ? 
                     <i className={"fa fa-" + menuItem.icon} />
                     : ''
                   )}
       						{menuItem.text}
-      					</Link>
+      					</a>
       			 </li>
     });
 
     return (
-			<ul className={styles.menu}>
+			<ul className={styles.list}>
         {menuItems}
       </ul>
     );

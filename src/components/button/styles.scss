@@ -9,7 +9,7 @@ Button
 
 // Static button placeholder
 %button {
-	display: inline-block;
+  display: inline-block;
   margin-bottom: 0;
   font-size:$button-default-font-size;
   font-weight: bold;
@@ -37,10 +37,10 @@ Button
 // Mixin for colour variations
 @mixin button($color) {
 	background-color: $color;
-	border-color: mix(black, $color, 5%);
+	border-color: mix(black, $color, 15%);
 	&:hover {
 		background-color: mix(black, $color, 10%);
-		border-color: mix(black, $color, 15%);
+		border-color: mix(black, $color, 20%);
 	}
 	&.hasFocus {
 		background-color: mix(black, $color, 25%);
@@ -55,7 +55,11 @@ Button
 	color: $button-default-text-color;
 	&:hover {
 		background-color: $gray-25;
-	} 
+	}
+	&.hasFocus {;
+		background-color: $gray-25;
+		border-color: mix(black, $gray-25, 30%);
+	}
 }
 // Colour vars for buttons
 $list: primary, warning, success, danger, info;
@@ -75,13 +79,13 @@ $text-color-list: $button-primary-text-color,
 @for $i from 1 through length($list) {
 	.#{nth($list, $i)} {
   	@extend %button;
-		@include button(nth($color-list, $i));
-		color: nth($text-color-list, $i);
+	@include button(nth($color-list, $i));
+	color: nth($text-color-list, $i);
   }
 }
 // Properties
 .small {
-	font-size: $button-small-font-size;
+  font-size: $button-small-font-size;
   line-height: $button-small-line-height;
   padding:0 $button-small-padding;
 }
@@ -103,14 +107,16 @@ $text-color-list: $button-primary-text-color,
        @include border-radius(0, 0.265em, 0.265em, 0); 
      } 
    } 
- } 
- 
+ }
  
  .dropdownButton { 
    display: inline-block; 
-   position:relative; 
+   position:relative;
    .caret {
-   	 @include caret;
-     margin-left:6px; 
-   } 
+   	margin-left:6px;
+   }
  } 
+
+.caret {
+	@include caret; 
+}

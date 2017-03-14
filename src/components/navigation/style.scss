@@ -28,16 +28,18 @@
   color: #444;
   cursor: pointer;
   display: flex;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
+  flex-direction: column;
   width: 100%;
 }
 
 .navbar a.navItem:hover {
   background: #F7F7F9;
+  text-decoration: none;
 }
 
 .navbar > :first-child {
-  margin-top: 10px;
+  //margin-top: 10px;
 }
 
 .navbar > :last-child {
@@ -47,14 +49,15 @@
 .navbar a.navItem.active,
 .navbar a.navItem.active:hover,
 .navbar a.navItem.active:focus {
-  background: #ddd;
+  background: rgba(0,0,0,0.05);
+  border-right:4px solid #039BE5;
   color: #039BE5;
 }
 
 .navbar a.navItem > i {
-  font-size: 21px;
-  margin-left: 20px;
-  min-width: 21px;
+  font-size: 28px;
+  width: 100%;
+  display: block;
   text-align: center;
 }
 
@@ -62,4 +65,14 @@
   font-size: 14px;
   margin-left: 20px;
   padding: 2px 0 0 0;
+}
+
+.name {
+  font-size:12px;
+  font-weight:bold;
+  text-transform: capitalize;
+  text-align:center;
+  display: block;
+  width:100%;
+  margin-top:2px;
 }

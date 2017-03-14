@@ -43,9 +43,7 @@ global app dependencies
 		cursor: col-resize;
 	}
 	.Resizer:hover {}
-	.Pane {
-		transition: all 0.3s ease 0s;
-	}
+	
 	// ReactTabs
 	.ReactTabs {
 		&__TabList {
