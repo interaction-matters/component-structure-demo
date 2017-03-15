@@ -46,6 +46,10 @@ global app dependencies
 	
 	// ReactTabs
 	.ReactTabs {
+		margin:2em;
+		background:white;
+		border-radius:0.3em;
+		border:1px solid #ccc;
 		&__TabList {
 			margin-bottom:0;
 			padding-left:0;

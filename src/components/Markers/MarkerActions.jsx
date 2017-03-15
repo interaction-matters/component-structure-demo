@@ -26,15 +26,10 @@ class MarkerActions extends React.Component {
 			<div className={styles.markerActions}>
 				<span className={styles.dropdown}>
 					<DropDownButton title="dropdown" type="default" title={this.state.title}>
-            <DropDownPanel toggle="off">
+            <DropDownPanel>
               <DropDownList onAddClick={changeTitle.bind(this)} menuItems={menuItems} />
             </DropDownPanel>
           </DropDownButton>
-				</span>
-				<span style={{float:'right'}}>
-					<button className={styles.search}>
-						<i className="fa fa-2x fa-search" aria-hidden="true"></i>
-					</button>
 				</span>
 			</div>
 		)

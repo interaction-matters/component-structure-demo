@@ -3,7 +3,7 @@
 @import '~assets/styles/base/variables/scaffolding';
 
 .markers {
-
+	position:relative;
 }
 
 .header {
@@ -12,6 +12,15 @@
 	background: lighten(#ddd, 3%);
 	border-bottom: 1px solid #ccc;
 	position:relative;
+	align-items:center;
+}
+
+.title {
+	flex:2;
+}
+
+.cta {
+	
 }
 
 .collapse {
@@ -19,23 +28,25 @@
 	cursor: pointer;
 	&.open {
 		position: absolute;
+		display: table;
 		right: 0;
+		top:calc(50vh - #{$header-height-base});
 		height: $header-height-base;
-		display: table;
-		vertical-align: middle;
-		border-left: 1px solid #ddd;
-		padding: 0 1em;
-		display: table;
+		border-left:1px solid #ccc;
+		border-top:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+		background:#ddd;
+		color: #444;
 		& > i {
 			display:table-cell;
 			vertical-align: middle;
 		}
 	}
 	&.closed {
-		display: block;
-		text-align:center;
-		padding:0.5em 0;
-		border-bottom: 1px solid #ddd;
+		//display: block;
+		//text-align:center;
+		//padding:0.5em 0;
+		//border-bottom: 1px solid #ddd;
 	}
 	&:hover {
 		background: darken(#ddd, 1%);
@@ -55,7 +66,8 @@
 
 .markerActions {
 	display:table;
-	width:100%;
+	width:calc(100% - 2em);
+	padding:1em;
 	border-bottom:1px solid #ccc;
 }
 

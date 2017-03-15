@@ -4,8 +4,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 //import Marker from './Marker';
 import MarkerActions from './MarkerActions';
 import Panel from 'components/Panel/Panel';
+import DropDownPanel from 'components/DropDownPanel/DropDownPanel';
+import DropDownList from 'components/DropDownList/DropDownList';
 import SlidePanel from 'components/SlidePanel/SlidePanel';
 import Button from 'components/Button/Button';
+import SplitButton from 'components/Button/SplitButton';
 
 import { inject, observer } from 'mobx-react';
 
@@ -17,24 +20,39 @@ class Markers extends React.Component {
 
 		Tabs.setUseDefaultStyles(false);
 
+		const epNos = [
+			{text:"EP 12345 678 90"}, 
+			{text:"EP 12345 678 90"}, 
+			{text:"EP 12345 678 90"}
+		]
+
 		const menuItems = [
-			{text:"All databases", target: "", icon: "database"}, 
-			{text:"Patent Literature", target: ""}, 
-			{text:"Non-patent Literature", target: ""}
+			{text:"All Databases"}, 
+			{text:"Patent Literature"}, 
+			{text:"Non-Patent Literature"}
 		]
 
 		return(
 			<div>
 				{( !markerCollapse ?
 					<div className={styles.markers}>
+						<span className={`${styles.collapse} ${styles.open}`} onClick={collapseMarkers}>
+							<i className='fa fa-fw fa-chevron-left' aria-hidden='true' />
+						</span>
 						<header className={styles.header}>
 							<span className={styles.title}>
-								<i className='fa fa-fw fa-cubes' aria-hidden='true' />
-								<h5>EP 12345 678 90</h5>
-							</span>		
-							<span className={`${styles.collapse} ${styles.open}`} onClick={collapseMarkers}>
-								<i className='fa fa-fw fa-chevron-left' aria-hidden='true' />
+								<SplitButton title="EP 12345 678 90" type="default">
+			            <DropDownPanel>
+			              <DropDownList menuItems={epNos} />
+			            </DropDownPanel>
+			          </SplitButton>
 							</span>
+							<span className={styles.cta}>
+								<Button type="primary" size="large">
+									<i className='fa fa-fw fa-search' aria-hidden='true' />
+									&nbsp;Search
+								</Button>
+							</span>				
 						</header>
 						<Tabs>
 							<TabList>
@@ -69,7 +87,7 @@ class Markers extends React.Component {
 								<i className='fa fa-fw fa-cubes' aria-hidden='true' />
 							</span>
 						</header>
-						<span className={`${styles.collapse} ${styles.closed}`} onClick={collapseMarkers}>
+						<span className={`${styles.collapse} ${styles.open}`} onClick={collapseMarkers}>
 							<i className='fa fa-fw fa-chevron-right' aria-hidden='true' />
 						</span>
 					</div>
