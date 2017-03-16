@@ -38,7 +38,7 @@ export default class SplitButton extends Component {
     		<Button {...this.props}>
     			{this.props.title}
     		</Button>
-    		<Button focus={focus} type={this.props.type} onAddClick={toggl.bind(this)}>
+    		<Button {...this.props} onAddClick={toggl.bind(this)}>
     			<span className={styles.caret}></span>
     		</Button>
     		{/* Pass down toggle state as props */}

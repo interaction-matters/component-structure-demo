@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items:center;
   /*transition: 0.3s ease flex;*/
   z-index: 1;
 }
@@ -28,9 +29,10 @@
   color: #444;
   cursor: pointer;
   display: flex;
-  padding: 1.2rem 0;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
+  height:$header-height-base;
 }
 
 .navbar a.navItem:hover {
@@ -38,8 +40,10 @@
   text-decoration: none;
 }
 
-.navbar > :first-child {
-  //margin-top: 10px;
+.navbar > a.navItem:first-child {
+  background:#444;
+  border-bottom:1px solid #444;
+  color:$white;
 }
 
 .navbar > :last-child {
@@ -50,7 +54,6 @@
 .navbar a.navItem.active:hover,
 .navbar a.navItem.active:focus {
   background: rgba(0,0,0,0.05);
-  border-right:4px solid #039BE5;
   color: #039BE5;
 }
 

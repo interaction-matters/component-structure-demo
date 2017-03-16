@@ -91,3 +91,9 @@
 		background:darken($primary, 5%);
 	}
 }
+
+.queryFooter {
+	padding: 1.4em;
+	background: lighten(#eee, 3%);
+	border-top: 1px solid #ccc;
+}

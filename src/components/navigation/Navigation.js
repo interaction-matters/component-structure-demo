@@ -19,9 +19,9 @@ export default class Navigation extends Component {
 	render () {
 		return (
 			<div className={styles.navbar}>
-				<NavItem key='epoque' name='epoque 2.0' link='/' icon='epoque2'>
+				<NavItem key='epoque' name='epoque 2.0' link='/' icon='epoque2' onlyActiveOnIndex>
 		    </NavItem>
-				<NavItem key='application' name='application' link='/application' icon='application' onlyActiveOnIndex>
+				<NavItem key='application' name='application' link='/application' icon='application'>
 		    </NavItem>
 		    <NavItem key='query' name='query' link='/query' icon='query'>
 		    </NavItem>

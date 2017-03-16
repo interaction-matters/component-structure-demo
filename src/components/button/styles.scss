@@ -100,11 +100,11 @@ $text-color-list: $button-primary-text-color,
    & > .button { 
      @include box-shadow(0, 0, 0, 0); 
      &:first-of-type { 
-       @include border-radius(0.265em, 0, 0, 0.265em); 
+       @include border-radius($button-border-radius, 0, 0, $button-border-radius); 
        border-right:0; 
      } 
      &:last-of-type { 
-       @include border-radius(0, 0.265em, 0.265em, 0); 
+       @include border-radius(0, $button-border-radius, $button-border-radius, 0); 
      } 
    } 
  }

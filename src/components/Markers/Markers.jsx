@@ -41,7 +41,7 @@ class Markers extends React.Component {
 						</span>
 						<header className={styles.header}>
 							<span className={styles.title}>
-								<SplitButton title="EP 12345 678 90" type="default">
+								<SplitButton title="EP 12345 678 90" size="large" type="default">
 			            <DropDownPanel>
 			              <DropDownList menuItems={epNos} />
 			            </DropDownPanel>
@@ -64,12 +64,15 @@ class Markers extends React.Component {
 	            	<MarkerActions menuItems={menuItems} />
 	            	<div style={{padding:'1.5em'}}>
 		            	<SlidePanel title="Marker Query" visibility="visible">
-		            		<Panel header="Marker A" />
-		            		<Panel header="Marker B" />
-		            		<Panel header="Marker C" />
-		            		<Panel header="Marker D" />
-		            	</SlidePanel>
-			            <Button type="default">Add additional query +</Button>
+		            		<Panel>Marker A</Panel>
+		            		<Panel>Marker B</Panel>
+		            		<Panel>Marker C</Panel>
+		            		<Panel>Marker D</Panel>
+		            		<Button type="primary">+ Add marker</Button>
+		            	</SlidePanel>            
+	            	</div>
+	            	<div className={styles.queryFooter}>
+	            		<Button type="default">+ Add additional query</Button>
 	            	</div>
 	            </TabPanel>
 	            <TabPanel>
@@ -78,7 +81,7 @@ class Markers extends React.Component {
 	            			No session information available
 	            		</div>
 	            </TabPanel>
-						</Tabs>			
+						</Tabs>
 					</div>
 					:
 					<div className={styles.markers}>
